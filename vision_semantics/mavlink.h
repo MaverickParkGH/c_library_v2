@@ -1,12 +1,12 @@
 /** @file
- *  @brief MAVLink comm protocol built from uAvionix.xml
+ *  @brief MAVLink comm protocol built from vision_semantics.xml
  *  @see http://mavlink.org
  */
 #pragma once
 #ifndef MAVLINK_H
 #define MAVLINK_H
 
-#define MAVLINK_PRIMARY_XML_HASH -6191051475354815190
+#define MAVLINK_PRIMARY_XML_HASH -631992664270212493
 
 #ifndef MAVLINK_STX
 #define MAVLINK_STX 253
@@ -29,6 +29,6 @@
 #endif
 
 #include "version.h"
-#include "uAvionix.h"
+#include "vision_semantics.h"
 
 #endif // MAVLINK_H

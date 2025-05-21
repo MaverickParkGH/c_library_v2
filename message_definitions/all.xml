@@ -61,6 +61,7 @@
     messages: 52000 - 52099
     commands: 52000 - 52099
   -->
+  <include>vision_semantics.xml</include>
   <!--Reserved range of IDs: contact james@auturgy.com.au
     messages: 52100 - 52499
     commands: 52100 - 52499

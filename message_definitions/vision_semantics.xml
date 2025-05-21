@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<mavlink>
+  <version>3</version>
+  <messages>
+    <message id="13000" name="ONBOARD_VISION_SEMANTICS">
+      <description>Onboard Vision AI Object Semantics</description>
+      <field type="uint64_t" name="time_utc">Current Time in UTC</field>
+      <field type="float" name="pitch">Pitch Angle</field>
+      <field type="float" name="yaw">Yaw Angle</field>
+      <field type="uint32_t" name="frame_id">Capture Image Frame Id about Detection</field>
+      <field type="uint32_t" name="n_object_entity">Number of Objects</field>
+      <field type="uint8_t[24]" name="object_entity_unit1">Object Entity Unit</field>
+      <field type="uint8_t[24]" name="object_entity_unit2">Object Entity Unit</field>
+      <field type="uint8_t[24]" name="object_entity_unit3">Object Entity Unit</field>
+      <field type="uint8_t[24]" name="object_entity_unit4">Object Entity Unit</field>
+      <field type="uint8_t[24]" name="object_entity_unit5">Object Entity Unit</field>
+      <field type="uint8_t[24]" name="object_entity_unit6">Object Entity Unit</field>
+      <field type="uint8_t[24]" name="object_entity_unit7">Object Entity Unit</field>
+      <field type="uint8_t[24]" name="object_entity_unit8">Object Entity Unit</field>
+      <field type="uint8_t[24]" name="object_entity_unit9">Object Entity Unit</field>
+    </message>
+    <message id="13001" name="ONBOARD_MISSION_VIDEO_URI">
+      <description>URI of mission video folder, sent by onboard computer after mission complete</description>
+      <field type="uint64_t" name="mission_uid">Unique mission identifier (timestamp or serial)</field>
+      <field type="char[240]" name="video_uri">SFTP URI for video folder (ex: sftp://192.168.1.165:/mnt/data/...)</field>
+      <!-- 암호화 여부: 0 = not encrypted, 1 = encrypted -->
+      <field type="uint8_t" name="is_encrypted">Indicates whether the video files in the folder are encrypted</field>
+    </message>    
+    <message id="13002" name="MISSION_VIDEO_DOWNLOAD_RESULT">
+      <description>GCS sends this to inform the vehicle that mission video has been downloaded</description>
+      <field type="uint64_t" name="mission_uid">Same mission identifier received earlier</field>
+      <field type="uint8_t" name="result">Result: 0 = success, 1 = failed, 2 = cancelled</field>
+    </message>    
+  </messages>
+</mavlink>
